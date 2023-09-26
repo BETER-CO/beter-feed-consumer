@@ -1,0 +1,14 @@
+/tests
+/var
+/node_modules
+/deploy
+/.DS_Store
+/.dockerignore
+/.git
+/.gitignore
+/.idea
+/build-multiplatform.sh
+/docker-compose.tcpdump.yml
+/local.Dockerfile
+/yarn-error.log
+/config/local-*.json

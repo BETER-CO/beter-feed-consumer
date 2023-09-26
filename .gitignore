@@ -1,0 +1,11 @@
+/log
+/node_modules
+/coverage
+/var/*
+.nyc_output
+package-lock.json
+.idea
+*.iml
+
+# MUST be the last line of this file
+!.gitkeep

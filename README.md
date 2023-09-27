@@ -8,6 +8,17 @@ keylog enabled to intercept and decrypt TLS traffic to the BETER's Feed.
 ### Manual run
 
 Make sure that the current working directory is the same as the root directory of the repository.
+If you didn't clone the repository make sure that in your current working directory folder `var` was created:
+
+```shell
+$ pwd
+/home/woz/project/beter-feed-consumer
+
+$ ls -la
+drwxr-xr-x   7 woz  staff    578 Sep 26 14:40 .
+drwxr-xr-x  14 woz  staff    510 Aug 30 14:05 ..
+drwxr-xr-x   2 woz  staff    850 Sep 26 14:41 var
+```
 
 Run container with `tcpdump`
 
@@ -19,7 +30,7 @@ $ docker run --rm -it --net=host \
   -i any -w "/tcpdump_log/dump_$(date +'%Y-%m-%d_%H-%M-%S').pcap" -G 3600 -C 1000 -v
 ```
 
-`tcpdump` will capture packets and store them on the host machine in the file `var/dump_XXX.pcap`. If the
+`tcpdump` will capture packets and store them on the host machine in the file `./var/dump_XXX.pcap`. If the
 size of the file will exceed 1Gb file rotation will happen and another file with new postfix will be created.
 Also, every 1 hour the new file with consecutive postfix will be created.
 

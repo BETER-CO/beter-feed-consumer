@@ -27,7 +27,7 @@ $ docker run --rm -it --net=host \
   --name beter-feed-tcpdump \
   -v "$PWD/var:/tcpdump_log" \
   corfr/tcpdump:latest \
-  -i any -w "/tcpdump_log/dump_$(date +'%Y-%m-%d_%H-%M-%S').pcap" -G 3600 -C 1000 -v
+  -i any -w "/tcpdump_log/dump_%m-%d-%H-%M-%S-%s.pcap" -G 3600 -v
 ```
 
 `tcpdump` will capture packets and store them on the host machine in the file `./var/dump_XXX.pcap`. If the

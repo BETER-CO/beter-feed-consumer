@@ -3,6 +3,8 @@
 This tools was designed to track latency and provide validation of data. It ships with tcpdump with TLS
 keylog enabled to intercept and decrypt TLS traffic to the BETER's Feed.
 
+[Video Tutorial is available too! Check it on YouTube!](https://www.youtube.com/watch?v=PWCLpECii9A)
+
 ## Run it
 
 ### Manual run
